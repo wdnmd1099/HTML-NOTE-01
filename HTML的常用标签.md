@@ -2,7 +2,7 @@
 
   超链接，创建一个点击能跳转到指定网址的文本
 ```html
-<img src="图片"  alt="加载失败后展示的文字">
+<a href="//XXX"></a>
 ```
 
   可以用target指定在哪一个窗口打开，默认是_self 在当前页面打开 
@@ -12,7 +12,7 @@
 
   href的取值，在输入网址时用//+地址的形式，不用http或https
   ```html
-<img src="//baidu.com">
+<a href="//baidu.com"></a>
 ```
 
 
