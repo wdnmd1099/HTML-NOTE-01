@@ -47,31 +47,27 @@
 
 
 
-        // 想模拟电脑端这样写，但是不行，以后知识储备足够再改吧
-        // painting1 = false
-        // var last1
-
-        // var isTouchDevice = 'ontouchstart' in
-        //     document.documentElement;
-        // if (isTouchDevice) {
-        //     canvas.ontouchstart = (e) => {
-        //         painting1 = true
-        //         last1 = [e.touches[0].clientX, e.touches[0].clientY]
 
 
-        //     }
-        // } else {
-        //     canvas.ontouchmove = (e) => {
-        //         drawLine(last1[0], last1[1], e.touches[0].clientX, e.touches[0].clientY)
-        //         last1 = [e.touches[0].clientX, e.touches[0].clientY]
-        //     }
-        // }
 
-        // if (isTouchDevice) {
-        //     canvas.ontouchcancel = (e) => {
-        //         painting1 = false
-        //     }
-        // }
+        var isTouchDevice = "ontouchstart" in document.documentElement;
+        if (isTouchDevice) {
+            canvas.ontouchstart = (e) => {
+                //移动端不需要定义画画的状态 是 或 否
+                last = [e.touches[0].clientX, e.touches[0].clientY]
+            }
+
+            canvas.ontouchmove = (e) => {
+
+                let x = e.touches[0].clientX;
+                let y = e.touches[0].clientY;
+                drawLine(last[0], last[1], e.touches[0].clientX, e.touches[0].clientY);
+                last = [e.touches[0].clientX, e.touches[0].clientY];
+            }
+
+        }
+
+
 
 
 
