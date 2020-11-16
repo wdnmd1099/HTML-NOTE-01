@@ -27,22 +27,22 @@
 
 
 
-        var isTouchDevice = 'ontouchstart' in
-            document.documentElement;
-        if (isTouchDevice) {
-            canvas.ontouchmove = (e) => {
-                let x = e.touches[0].clientX
-                let y = e.touches[0].clientY
-                ctx.beginPath();
-                ctx.arc(x, y, 10, 0, 2 * Math.PI); //画圆
-                ctx.stroke();//圆的描边颜色，可以删除，因为画的圆不需要边框
-                ctx.fill();  //填充颜色
+        // var isTouchDevice = 'ontouchstart' in
+        //     document.documentElement;
+        // if (isTouchDevice) {
+        //     canvas.ontouchmove = (e) => {
+        //         let x = e.touches[0].clientX
+        //         let y = e.touches[0].clientY
+        //         ctx.beginPath();
+        //         ctx.arc(x, y, 10, 0, 2 * Math.PI); //画圆
+        //         ctx.stroke();//圆的描边颜色，可以删除，因为画的圆不需要边框
+        //         ctx.fill();  //填充颜色
 
 
-            }
-        } else {
+        //     }
+        // } else {
 
-        }
+        // }
 
 
 
